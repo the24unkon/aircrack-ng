@@ -51,3 +51,15 @@ $ airmon-ng stop wlan0mon
 # Make sure you have rockyou in text format (unzip file on Kali)
 # Replace hack1-01.cap with your file name
 $ aircrack-ng hack1-01.cap -w /usr/share/wordlists/rockyou.txt 
+
+# If there is a problem in the wireless adapter 
+# To Enable monitor mode 
+sudo ip link set wlan0 down
+sudo ip link set wlan0 name wlan0mon
+
+# To disable monitor mode 
+sudo ip link set wlan0mon down
+sudo ip link set wlan0mon name wlan0
+sudo ifconfig wlan0 down
+sudo iwconfig wlan0 mode managed
+sudo systemctl restart network-manager.service
